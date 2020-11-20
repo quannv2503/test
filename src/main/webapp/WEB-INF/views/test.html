@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head th:insert="index::he">
+
+</head>
+<body>
+<div th:each="list,a:${bien}">
+    <p th:text="${list.getId()}"></p>
+    <p th:text="${a.last}"></p>
+    <p th:text="${list.name}"></p>
+</div>
+<div th:if="4==4">
+    <div th:each="list:${bien}">
+        <p th:utext="${list.id}"></p>
+        <p th:text="${list.name}"></p>
+    </div>
+</div>
+</body>
+</html>
